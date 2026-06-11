@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@utility emoji-3d {
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.15)) drop-shadow(0 3px 4px rgba(0, 0, 0, 0.1));
+  transform: translateY(-2px) scale(1.05);
+  display: inline-block;
+}
