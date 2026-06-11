@@ -66,7 +66,7 @@ router.post('/register', async (req, res) => {
       return res.status(409).json({ error: 'Email is already registered.' });
     }
     console.error('Register error:', err.message);
-    res.status(500).json({ error: 'Server error during registration.' });
+    res.status(500).json({ error: 'Server error during registration.', details: err.message });
   }
 });
 
@@ -106,7 +106,7 @@ router.post('/login', async (req, res) => {
     res.json({ token, user: safeUser });
   } catch (err) {
     console.error('Login error:', err.message);
-    res.status(500).json({ error: 'Server error during login.' });
+    res.status(500).json({ error: 'Server error during login.', details: err.message });
   }
 });
 
