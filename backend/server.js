@@ -4,6 +4,9 @@
 
 require('dotenv').config();
 
+// Fix for Supabase SSL certs on Render
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
 const http    = require('http');
 const express = require('express');
 const cors    = require('cors');
